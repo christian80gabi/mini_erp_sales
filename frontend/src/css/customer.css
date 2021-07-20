@@ -1,0 +1,12 @@
+.formMargin {
+  margin: 6%;
+}
+
+.formMargin #input {
+  margin: 1%;
+}
+
+.formMargin #button {
+  margin-left: 13%;
+  margin-top: 2%;
+}
