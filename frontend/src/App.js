@@ -2,10 +2,10 @@ import React from "react";
 import "./App.css";
 
 import {
-  BrowserRouter as Router,
+  BrowserRouter,
   Route,
-  Switch,
-  Redirect,
+  Routes,
+  Navigate,
 } from "react-router-dom";
 
 import Home from "./pages";
@@ -19,17 +19,17 @@ import UpdateCustomer from "./components/updateCustomer/updateCustomer";
 function App() {
   return (
     <div>
-      <Router>
-        <Switch>
+      <BrowserRouter basename="/app">
+        <Routes>
           <Route exact path="/" component={Home} />
           <Route exact path="/customers" component={Customers} />
           <Route exact path="/customers/display/:id" component={DisplayCustomer} />
           <Route exact path="/customers/add" component={AddCustomer} />
           <Route exact path="/customers/update/:id" component={UpdateCustomer} />
           <Route exact path="/404" component={NotFoundPage} />
-          <Redirect to="/404" />
-        </Switch>
-      </Router>
+          <Navigate to="/404" />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }

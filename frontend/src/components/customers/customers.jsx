@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Customer from "./customer";
 import NavbarCustomers from "./navbarCustomers";
-import { Redirect } from "react-router-dom";
+import { Navigate } from "react-router-dom";
 
 // import SVG file
 import list from "../../img/list.svg";
@@ -77,7 +77,7 @@ class Customers extends Component {
     if (response.status === 200) {
       alert("Customer deleled Successfully...");
 
-      return <Redirect to="./customers" />;
+      return <Navigate to="./customers" />;
     }
   };
 
@@ -115,7 +115,7 @@ class Customers extends Component {
    */
   handleDelete = (customerId) => {
     this.deleteCustomer(customerId);
-    return this.render(<Redirect to="./customers/" />);
+    return this.render(<Navigate to="./customers/" />);
   };
 
   /**
