@@ -1,0 +1,29 @@
+# ---------------------------------------- #
+#              DOCKER COMPOSE              #
+# ---------------------------------------- #
+#                  MYSQL 8                 #
+# ---------------------------------------- #
+
+version: '3.8'
+
+services:
+  db:
+    container_name: mini_erp_sales_db
+    image: mysql
+    command: --default-authentication-plugin=mysql_native_password
+    environment:
+      MYSQL_ROOT_PASSWORD: mini-erp
+      MYSQL_DATABASE: mini_erp
+      MYSQL_USER: christian80gabi
+      MYSQL_PASSWORD: db4free.net
+    ports:
+      - 3306:3306
+    volumes:
+      - ./database/.data:/var/lib/mysql
+
+volumes:
+  data: { }
+
+networks:
+  default:
+    name: mini_erp_sales_default
