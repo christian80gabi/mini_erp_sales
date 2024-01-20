@@ -1,4 +1,4 @@
-JavaScript
+# JavaScript
 
 - React => frontend (User Interfaces)  
 
@@ -6,11 +6,11 @@ JavaScript
  CRUD => Create, Read, Update, Delete
 (Server)
 
-Database 
+# Database 
 - MySQL
 
 
-TO-DO
+# TO-DO
 
 - Changer la couleur des images .svg									DONE
 - Redirection automatique vers la page d'accueil lors de l'ajout d'un client
